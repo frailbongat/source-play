@@ -6,7 +6,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.27.0
   '@typescript-eslint/parser': ^5.27.0
   autoprefixer: ^10.4.8
-  daisyui: ^2.22.0
+  daisyui: ^2.24.0
   eslint: ^8.16.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^4.0.0
@@ -23,7 +23,7 @@ specifiers:
   vite: ^3.0.0
 
 dependencies:
-  daisyui: 2.22.0_25hquoklqeoqwmt7fwvvcyxm5e
+  daisyui: 2.24.0_25hquoklqeoqwmt7fwvvcyxm5e
   svelte-heros: 2.3.3
 
 devDependencies:
@@ -658,8 +658,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  /daisyui/2.22.0_25hquoklqeoqwmt7fwvvcyxm5e:
-    resolution: {integrity: sha512-H08aQP+Mfl2fQOmyaxd1NP54gQbr2xRUj2MmFFvfJ5EDGbthVBICDMNFKyia/zBfR58G8eTJo3CmydglM81/7Q==}
+  /daisyui/2.24.0_25hquoklqeoqwmt7fwvvcyxm5e:
+    resolution: {integrity: sha512-Fdu/4LCdTfWLWAbCuPxvnaRotEfJ+hVPgZ2kv/aUk9RZ00Yk8fGdJtIf0kXJ3IgUKOr8rCXUpfQY6DQU9usPCQ==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
