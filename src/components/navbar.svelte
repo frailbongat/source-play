@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Search, Moon } from 'svelte-heros';
+	import { Search } from 'svelte-heros';
+	import { ThemeToggle } from 'components';
 </script>
 
 <div class="navbar bg-base-100">
@@ -14,9 +15,9 @@
 		<button class="btn btn-ghost btn-circle">
 			<Search class="h-5 w-5" />
 		</button>
-		<button class="btn btn-ghost btn-circle">
-			<Moon class="h-5 w-5" />
-		</button>
+
+		<ThemeToggle />
+
 		<a
 			href="https://github.com/frailbongat/source-play"
 			target="_blank"

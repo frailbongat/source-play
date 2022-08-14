@@ -1,8 +1,10 @@
 <script>
 	import { Navbar } from 'components';
-
+	import { theme } from '../stores';
 	import '../app.css';
 </script>
 
-<Navbar />
-<slot />
+<div data-theme={$theme} class="h-screen">
+	<Navbar />
+	<slot />
+</div>
