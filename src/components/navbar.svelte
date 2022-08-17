@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Search } from 'svelte-heros';
+
 	import { Logo, ThemeToggle } from 'components';
+	import { clickOutside } from 'utils';
 
 	export let searched: boolean = false;
 </script>
@@ -21,7 +23,10 @@
 
 	{#if searched}
 		<div class="relative grow">
-			<div class="relative w-full  max-w-2xl mx-auto flex items-center">
+			<div
+				class="relative w-full  max-w-2xl mx-auto flex items-center"
+				use:clickOutside={() => (searched = false)}
+			>
 				<Search class="absolute left-2.5" />
 				<input
 					type="text"
@@ -33,7 +38,10 @@
 	{/if}
 
 	<div>
-		<button class="btn btn-ghost btn-circle" on:click={() => (searched = !searched)}>
+		<button
+			class="btn btn-ghost btn-circle"
+			on:click|stopPropagation={() => (searched = !searched)}
+		>
 			<Search class="h-5 w-5" />
 		</button>
 
