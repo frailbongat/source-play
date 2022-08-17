@@ -3,8 +3,8 @@
 	import { theme } from 'stores';
 
 	const onToggle = () => {
-		if ($theme === 'emerald') return ($theme = 'dracula');
-		if ($theme === 'dracula') return ($theme = 'emerald');
+		if ($theme === 'emerald') return ($theme = 'dark');
+		if ($theme === 'dark') return ($theme = 'emerald');
 	};
 </script>
 
