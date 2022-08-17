@@ -1,11 +1,14 @@
 <script lang="ts">
 	import { Search } from 'svelte-heros';
-	import { ThemeToggle } from 'components';
+	import { Logo, ThemeToggle } from 'components';
 </script>
 
 <div class="navbar bg-base-100">
 	<div class="flex-1">
-		<a href="/" class="btn btn-ghost normal-case text-xl">Source Play</a>
+		<a href="/" class="btn btn-ghost normal-case text-xl flex gap-2.5 items-center">
+			<Logo />
+			Source Play
+		</a>
 		<ul class="menu menu-horizontal p-0 hidden md:flex">
 			<li><a href="/">Apps</a></li>
 			<li><a href="/games">Games</a></li>
