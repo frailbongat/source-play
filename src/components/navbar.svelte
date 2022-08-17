@@ -1,21 +1,39 @@
 <script lang="ts">
 	import { Search } from 'svelte-heros';
 	import { Logo, ThemeToggle } from 'components';
+
+	export let searched: boolean = false;
 </script>
 
-<div class="navbar bg-base-100">
-	<div class="flex-1">
+<div class="navbar bg-base-100 justify-between">
+	<div>
 		<a href="/" class="btn btn-ghost normal-case text-xl flex gap-2.5 items-center">
 			<Logo />
 			Source Play
 		</a>
-		<ul class="menu menu-horizontal p-0 hidden md:flex">
-			<li><a href="/">Apps</a></li>
-			<li><a href="/games">Games</a></li>
-		</ul>
+		{#if !searched}
+			<ul class="menu menu-horizontal p-0 hidden md:flex">
+				<li><a href="/">Apps</a></li>
+				<li><a href="/games">Games</a></li>
+			</ul>
+		{/if}
 	</div>
-	<div class="flex-none">
-		<button class="btn btn-ghost btn-circle">
+
+	{#if searched}
+		<div class="relative grow">
+			<div class="relative w-full  max-w-2xl mx-auto flex items-center">
+				<Search class="absolute left-2.5" />
+				<input
+					type="text"
+					placeholder="Type here"
+					class="input input-bordered w-full max-w-2xl pl-10"
+				/>
+			</div>
+		</div>
+	{/if}
+
+	<div>
+		<button class="btn btn-ghost btn-circle" on:click={() => (searched = !searched)}>
 			<Search class="h-5 w-5" />
 		</button>
 
