@@ -8,7 +8,7 @@
 </script>
 
 <div class="navbar bg-base-100 justify-between">
-	<div>
+	<div class={searched ? 'hidden md:flex' : ''}>
 		<a href="/" class="btn btn-ghost normal-case text-xl flex gap-2.5 items-center">
 			<Logo />
 			Source Play
@@ -22,7 +22,7 @@
 	</div>
 
 	{#if searched}
-		<div class="relative grow">
+		<div class="relative grow mx-3 md:mx-0">
 			<div
 				class="relative w-full  max-w-2xl mx-auto flex items-center"
 				use:clickOutside={() => (searched = false)}
@@ -37,7 +37,7 @@
 		</div>
 	{/if}
 
-	<div>
+	<div class={searched ? 'hidden md:flex' : ''}>
 		<button
 			class="btn btn-ghost btn-circle"
 			on:click|stopPropagation={() => (searched = !searched)}
