@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Search } from 'svelte-heros';
+	import { page } from '$app/stores';
 
 	import { Logo, ThemeToggle } from 'components';
 	import { clickOutside } from 'utils';
@@ -15,8 +16,12 @@
 		</a>
 		{#if !searched}
 			<ul class="menu menu-horizontal p-0 hidden md:flex">
-				<li><a href="/">Apps</a></li>
-				<li><a href="/games">Games</a></li>
+				<li>
+					<a href="/" class={$page.url.pathname === '/' ? 'text-primary' : ''}>Apps</a>
+				</li>
+				<li>
+					<a href="/games" class={$page.url.pathname === '/games' ? 'text-primary' : ''}>Games</a>
+				</li>
 			</ul>
 		{/if}
 	</div>
