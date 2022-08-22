@@ -70,3 +70,12 @@
 		</a>
 	</div>
 </div>
+
+<ul class="flex mx-6 space-x-8 py-4 md:hidden">
+	<li>
+		<a href="/" class={$page.url.pathname === '/' ? 'text-green-600' : ''}>Apps</a>
+	</li>
+	<li>
+		<a href="/games" class={$page.url.pathname === '/games' ? 'text-green-500' : ''}>Games</a>
+	</li>
+</ul>
