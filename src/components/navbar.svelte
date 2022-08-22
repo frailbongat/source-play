@@ -17,10 +17,10 @@
 		{#if !searched}
 			<ul class="menu menu-horizontal p-0 hidden md:flex">
 				<li>
-					<a href="/" class={$page.url.pathname === '/' ? 'text-primary' : ''}>Apps</a>
+					<a href="/" class={$page.url.pathname === '/' ? 'text-green-600' : ''}>Apps</a>
 				</li>
 				<li>
-					<a href="/games" class={$page.url.pathname === '/games' ? 'text-primary' : ''}>Games</a>
+					<a href="/games" class={$page.url.pathname === '/games' ? 'text-green-500' : ''}>Games</a>
 				</li>
 			</ul>
 		{/if}
