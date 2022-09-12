@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Moon, Search } from 'svelte-heros';
+	import { Moon, Search, Sun } from 'svelte-heros';
 	import classNames from 'classnames';
 	import { page } from '$app/stores';
 	import { Github, Logo, MenuButton } from 'components';
@@ -15,6 +15,18 @@
 		{ label: 'Movies', href: '/movies' },
 		{ label: 'Books', href: '/books' }
 	];
+
+	const toggleTheme = () => {
+		if (localStorage.getItem('color-theme')) {
+			if (localStorage.getItem('color-theme') === 'light') {
+				document.documentElement.classList.add('dark');
+				localStorage.setItem('color-theme', 'dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+				localStorage.setItem('color-theme', 'light');
+			}
+		}
+	};
 </script>
 
 <div class="bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-gray-800">
@@ -48,7 +60,10 @@
 
 		<div class="flex gap-1">
 			<MenuButton><Search variation="solid" size="20" /></MenuButton>
-			<MenuButton><Moon variation="solid" size="20" /></MenuButton>
+			<MenuButton on:click={toggleTheme}>
+				<Moon variation="solid" size="20" class="block dark:hidden" />
+				<Sun variation="solid" size="20" class="dark:block hidden" />
+			</MenuButton>
 			<a href="https://github.com/frailbongat/source-play" target="_blank">
 				<MenuButton><Github /></MenuButton>
 			</a>
