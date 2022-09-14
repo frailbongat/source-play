@@ -3,3 +3,4 @@ export { default as Logo } from './logo.svelte';
 export { default as Navbar } from './navbar.svelte';
 export { default as Github } from './github.svelte';
 export { default as GlobalSearch } from './global-search.svelte';
+export { default as Footer } from './footer.svelte';
