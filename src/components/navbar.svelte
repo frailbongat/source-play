@@ -31,7 +31,7 @@
 	};
 </script>
 
-<div class="bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-gray-800">
+<div class="bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-gray-800 fixed w-full">
 	<div class="container flex items-center justify-between h-16 mx-auto px-4">
 		<div class={classNames('gap-8', searched ? 'hidden md:flex' : 'flex')}>
 			<a

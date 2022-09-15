@@ -11,8 +11,10 @@
 	];
 </script>
 
-<div class="bg-white border-t border-gray-200 dark:border-gray-600 dark:bg-gray-800">
-	<div class="container items-center justify-between h-16 mx-auto px-4 flex md:hidden">
+<div
+	class="bg-white border-t border-gray-200 dark:border-gray-600 dark:bg-gray-800 block md:hidden fixed z-50 bottom-0 w-full"
+>
+	<div class="container items-center justify-between h-16 mx-auto px-4 flex">
 		{#each menus as { icon, label, href }}
 			<a
 				{href}

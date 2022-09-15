@@ -4,8 +4,8 @@
 	import { Footer, Navbar } from 'components';
 </script>
 
-<div class="flex flex-col h-screen dark:bg-gray-900">
-	<Navbar />
-	<div class="grow container mx-auto p-4"><slot /></div>
-	<Footer />
+<Navbar />
+<div class="min-h-screen dark:bg-gray-900 container mx-auto p-4 py-20 md:pb-4">
+	<slot />
 </div>
+<Footer />

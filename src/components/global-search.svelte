@@ -5,7 +5,7 @@
 	export let searched: boolean = false;
 </script>
 
-<div class="relative w-full max-w-4xl ml-6 pr-4" use:clickOutside={() => (searched = false)}>
+<div class="relative w-full max-w-3xl md:ml-6 md:mr-4" use:clickOutside={() => (searched = false)}>
 	<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
 		<Search class="w-5 h-5 text-gray-500 dark:text-gray-400" variation="solid" />
 	</div>
