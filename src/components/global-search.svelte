@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Search } from 'svelte-heros';
 	import { clickOutside } from 'utils';
 
 	export let searched: boolean = false;
@@ -7,7 +6,13 @@
 
 <div class="relative w-full max-w-3xl md:ml-6 md:mr-4" use:clickOutside={() => (searched = false)}>
 	<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-		<Search class="w-5 h-5 text-gray-500 dark:text-gray-400" variation="solid" />
+		<span class="text-gray-500 dark:text-gray-400 inline-flex items-center">
+			<lord-icon
+				src="https://cdn.lordicon.com/rlizirgt.json"
+				style="width:20px;height:20px"
+				class="current-color"
+			/>
+		</span>
 	</div>
 	<input
 		type="text"

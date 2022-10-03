@@ -67,8 +67,14 @@
 		{/if}
 
 		<div class={classNames('gap-1', searched ? 'hidden md:flex' : 'flex')}>
-			<MenuButton on:click={() => (searched = !searched)}>
-				<Search variation="solid" size="20" />
+			<MenuButton on:click={() => (searched = !searched)} class="navbar-search">
+				<lord-icon
+					src="https://cdn.lordicon.com/rlizirgt.json"
+					trigger="hover"
+					style="width:20px;height:20px"
+					class="current-color"
+					target=".navbar-search"
+				/>
 			</MenuButton>
 			<MenuButton on:click={toggleTheme}>
 				<Moon variation="solid" size="20" class="block dark:hidden" />
